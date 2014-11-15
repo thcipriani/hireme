@@ -1,0 +1,10 @@
+{
+  "name": "tyler_cipriani_resume",
+  "author": "Tyler Cipriani <tyler@tylercipriani.com> (http://www.tylercipriani.com)",
+  "version": "0.0.1",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "autoprefixer": "^4.0.0",
+    "less": "^2.0.0"
+  }
+}
