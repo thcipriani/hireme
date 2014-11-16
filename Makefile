@@ -43,6 +43,7 @@ $(INDEX): $(RESUME) $(CSS)
 # copy to readme.md
 README.md: $(RESUME)
 	cp "$<" "$@"
+	sed -i -e 's/^:/\n/' -e 's/^    \*/  */' -e 's/\*\*_—/** _/' -e 's/—_/_ /' -e 's/ {\..*$$//' "$@"
 
 # create pdf résumé
 résumé.pdf: $(RESUME) $(RESUMEEDU)
