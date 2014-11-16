@@ -74,10 +74,12 @@ It's cool to have markdown in the head of an HTML document right? Sure.
       </div>
     <script>
       (function() {
-        var doBlur = function() { document.title = '😿 Miss You!' }
-        window.onblur = doBlur
+        var doBlur, doFocus
 
-        var doFocus = function() { document.title = 'Tyler Cipriani—Résumé' }
+        doBlur  = function() { document.title = '😿 Miss You!' }
+        doFocus = function() { document.title = 'Tyler Cipriani—Résumé' }
+
+        window.onblur = doBlur
         window.onfocus = doFocus
       }());
     </script>

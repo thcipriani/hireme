@@ -45,7 +45,7 @@ It's cool to have markdown in the head of an HTML document right? Sure.
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
               <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic&subset=latin,latin-ext">
-              <link rel="stylesheet" href="css/main-min.css">
+              <link rel="stylesheet" href="./css/main-min.css">
           </head>
     <body>
 
@@ -122,10 +122,12 @@ It's cool to have markdown in the head of an HTML document right? Sure.
       </div>
     <script>
       (function() {
-        var doBlur = function() { document.title = '😿 Miss You!' }
-        window.onblur = doBlur
+        var doBlur, doFocus
 
-        var doFocus = function() { document.title = 'Tyler Cipriani—Résumé' }
+        doBlur  = function() { document.title = '😿 Miss You!' }
+        doFocus = function() { document.title = 'Tyler Cipriani—Résumé' }
+
+        window.onblur = doBlur
         window.onfocus = doFocus
       }());
     </script>
