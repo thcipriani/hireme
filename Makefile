@@ -9,9 +9,12 @@ CSS          = css/main-min.css
 
 TEMPLATE     = src/layout/default
 RESUME       = src/résumé.md
+RESUMEEDU    = src/résumé-edu.md
+TEMP         = /tmp/resume.md
 INDEX        = index.html
 
-PANDOC_SWITCHES =--atx-headers --section-divs --template "$(TEMPLATE)" -c 'http://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic&subset=latin,latin-ext' -c "$(CSS)"
+PANDOCFLAGS =--atx-headers --section-divs --template "$(TEMPLATE)" -c 'http://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic&subset=latin,latin-ext' -c "$(CSS)"
+PANDOCTEXFLAGS =
 
 all: $(INDEX)
 
@@ -28,7 +31,12 @@ $(CSS): $(PRECSS)
 	$(AUTOPREFIXER) $(PRECSS) -o "$@"
 
 $(INDEX): $(RESUME) $(CSS)
-	$(PANDOC) $(PANDOC_SWITCHES) -f markdown -t html5 -o "$@" "$(RESUME)"
+	$(PANDOC) $(PANDOCFLAGS) -f markdown -t html5 -o "$@" "$(RESUME)"
+
+résumé.tex: $(RESUME) $(RESUMEEDU)
+	cat $(RESUME) $(RESUMEEDU) > $(TEMP)
+	sed -i -e '7,13d' $(TEMP) # delete "About Me"
+	$(PANDOC) $(PADCOTTEXFLAGS) -f markdown -t latex  -o "$@" $(TEMP)
 
 serve:
 	python2 -mSimpleHTTPServer
