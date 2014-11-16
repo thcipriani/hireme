@@ -10,8 +10,9 @@
 
 ## Education
 
-**Wichita State University**_—Bachelor of Business Administration—Entrepreneurship—_Wichita, KS
+**Wichita State University**_—Entrepreneurship—_Wichita, KS
 :   May 2009
 
+    * Bachelor of Business Administration
     * Magna Cum Laude
     * Minor in Management
