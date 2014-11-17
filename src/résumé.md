@@ -23,16 +23,16 @@ I really love the internet, and I worry about it all the time.
     *  Design and implement PostgreS trigger-based audit trail for important
        database tables
 
-    *  Create android-tablet-based HTML5 shipping software that allows
-       warehouse pickers to pick 20 orders in the time it used to take to
-       pick one
+    *  Create android-tablet-based HTML5, JavaScript-MVC shipping software
+       that allows warehouse pickers to pick 20 orders in the time it used
+       to take to pick one
 
     *  Implement MongoDB-backed asset library with JavaScript front-end used
        for all customer-facing image management
 
 
 **UpSync**_—Web Developer/Systems Administrator—_Boulder, CO
-:    Oct. 2012–Nov. 2013
+:   Oct. 2012–Nov. 2013
 
     * Developed features for mobile, offline project with Zend (PHP 5.4, at
       the time) and a smattering of Objective-C and JavaScript
@@ -53,13 +53,15 @@ I really love the internet, and I worry about it all the time.
       storage, streaming media, and web applications in virtualized Xen
       environment
 
-    * Built, managed, and backed-up apache2/nginx/MySQL servers
+    * Built, managed, and backed-up Apache2/Nginx/MySQL servers
 
-    * Developed internal and customer-facing web services to:
+    * Developed, designed, and architected internal and customer-facing
+      web services to:
 
         - Stream shoutcast channels, add and ban tracks from your library and
           build new streaming channels on-the-fly via PHP web interface
 
-        - Automate management of 400,000 OGG, FLAC and MP3 files using Rsync,
-          SoX, FFMPEG, Python 2, duct-tape, and blasphemous prayers
+        - Automate management of 100s of thousands of OGG, FLAC and MP3
+          files using Rsync, SoX, FFMPEG, Python 2, and a fair amount of
+          Bash
 
