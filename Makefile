@@ -13,7 +13,7 @@ RESUMEEDU    = ./src/résumé-edu.md
 TEMP         = /tmp/resume.md
 INDEX        = ./index.html
 
-PANDOCFLAGS =--atx-headers --section-divs --template "$(TEMPLATE)" -c 'http://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic&subset=latin,latin-ext' -c "$(CSS)"
+PANDOCFLAGS =--atx-headers --section-divs --template "$(TEMPLATE)" -c '//fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic&subset=latin,latin-ext' -c "$(CSS)"
 PANDOCTEXFLAGS =-V geometry:"top=2cm, bottom=2cm, left=3cm, right=3cm"
 
 REPO_ASSERT := $(shell git config --get remote.origin.url)
@@ -48,7 +48,7 @@ README.md: $(RESUME)
 # create pdf résumé
 résumé.pdf: $(RESUME) $(RESUMEEDU)
 	cat $(RESUME) $(RESUMEEDU) > $(TEMP)
-	sed -i -e '7,13d' $(TEMP) # delete "About Me"
+	sed -i -e '7,22d' $(TEMP) # delete "About Me"
 	$(PANDOC) $(PANDOCTEXFLAGS) -o "$@" $(TEMP)
 
 # easier than typing “résumé”
@@ -56,6 +56,7 @@ pdf: résumé.pdf
 
 # update github pages repo
 gh-pages: $(INDEX)
+	rm -rf -- "$@"
 	git clone "$(REPO)" "$@"
 	@(cd "$@" && git checkout "$@") || (cd "$@" && git checkout --orphan "$@" && git rm -rf .)
 	cp -R "./css" "$@"
@@ -63,12 +64,15 @@ gh-pages: $(INDEX)
 
 # local development
 serve:
-	python2 -mSimpleHTTPServer
+	cd gh-pages && python2 -mSimpleHTTPServer
 
 # recompile everything when I do anything
 watch:
 	while true; do \
     inotifywait -e modify "$(LESS)" "$(RESUME)" && make; \
 	done;
+
+deploy:
+	s3cmd sync --add-header=Expires:max-age=604800 --exclude '.git/*' --acl-public gh-pages/ s3://tylercipriani.com/hireme/
 
 .PHONY: serve watch pdf commit

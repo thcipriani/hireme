@@ -4,6 +4,8 @@
 > without looking like it’s been marked up with tags or formatting
 > instructions. – John Gruber
 
+[I used Markdown to make this résumé.](https://github.com/thcipriani/hireme/blob/master/README.md)
+
 I use Markdown in Vim for writing.
 
 Todo lists, notes, blogging, meeting notes—whatever. Strewn across a
@@ -14,9 +16,6 @@ Ever since I started using [Pandoc](http://johnmacfarlane.net/pandoc/) (which
 is software written in Haskell by [John McFarlane](http://john.macfarlane.usesthis.com/))
 I've started finding _even more_ uses for Markdown. My résumé is one such
 use case.
-
-Using Pandoc, a Makefile, Vim and Github pages just seemed like the path
-of least resistance to make this résumé.
 
 I also found some good resources:
 
