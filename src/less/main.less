@@ -142,7 +142,6 @@ h1 a { text-decoration: none; }
 h1 ~ p { margin: 0; }
 
 h2 {
-  text-align: center;
   font-style: italic;
 }
 
@@ -175,6 +174,13 @@ dd ul li ul li p:before { content: '\2612'; }
 
 .normal-style  { display: none; }
 .console-style { display: block; }
+
+.oss {
+  margin: 2em 0;
+  padding: 2em 0;
+  border-top: thin dotted #a1a1a1;
+  border-bottom: thin dotted #a1a1a1;
+}
 
 @media (max-width: 650px) { body { font-size: 1.25em; } }
 
@@ -339,6 +345,13 @@ html:target dd:after {
   content: '}';
   display: block;
   margin: 0 0 1em -3.5em;
+}
+
+html:target .oss {
+  margin: 0;
+  padding: 1em 0;
+  border-top: none;
+  border-bottom: none;
 }
 
 html:target .normal-style { display: block; }
