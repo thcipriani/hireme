@@ -31,7 +31,7 @@ I ♥ the internet—I worry about it all the time.
     * Move important table logging from MongoDB to PostgreSQL-trigger
       audit trail
 
-    * Create android-tablet-based HTML5, JavaScript-MVC shipping software
+    * Create android-tablet ReactJS-based shipping software
       that allows warehouse pickers to pick 20 orders in the time it used
       to take to pick one
 
