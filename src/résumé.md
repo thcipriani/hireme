@@ -15,7 +15,7 @@ I ♥ the internet—I worry about it all the time.
 ## I Sprechen Ze Open Source {.oss}
 
 * [Bootstrap](https://github.com/twbs/bootstrap/issues/9855#issuecomment-37828630)
-* [React.js](https://github.com/hakimel/reveal.js/pull/591)
+* [Reveal.js](https://github.com/hakimel/reveal.js/pull/591)
 * [H5bp Effeckt.css](https://github.com/h5bp/Effeckt.css/commit/603c7a2dd9e5443278bd5f08e6aa34fbf802d5d9)
 * [Thoughtbot Laptop](https://github.com/thoughtbot/laptop/pull/136)
 * [SparkFun JenkHub](https://github.com/sparkfun/jenkhub)
